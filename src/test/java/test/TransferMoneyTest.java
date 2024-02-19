@@ -26,7 +26,6 @@ public class TransferMoneyTest {
     @Test()
     @DisplayName("ValidTransferFromFirstToSecond")
     void shouldTransferMoneyFromFirstToSecond() {
-        open("http://localhost:9999");
         var loginPage = new LoginPage();
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
@@ -49,7 +48,6 @@ public class TransferMoneyTest {
     @Order(2)
     @Test
     void shouldTransferMoneyFromSecondToFirst() {
-        open("http://localhost:9999");
         var loginPage = new LoginPage();
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
@@ -72,8 +70,6 @@ public class TransferMoneyTest {
     @Order(3)
     @Test
     void shouldTransferMoneyFromSecondToSecond() {
-
-
         var loginPage = new LoginPage();
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
